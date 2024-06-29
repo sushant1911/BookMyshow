@@ -2,7 +2,6 @@ package com.sushant.BookMyshow.BookMyshow.Service.ServiceImplementation;
 
 import com.sushant.BookMyshow.BookMyshow.CoustomResponse.Response;
 import com.sushant.BookMyshow.BookMyshow.Entity.User;
-import com.sushant.BookMyshow.BookMyshow.ExceptionHandler.ErrorResponse;
 import com.sushant.BookMyshow.BookMyshow.Repository.UserRepository;
 import com.sushant.BookMyshow.BookMyshow.Service.UserService;
 import jakarta.validation.Valid;
