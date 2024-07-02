@@ -8,5 +8,5 @@ import org.springframework.validation.BindingResult;
 
 @Service
 public interface UserService {
-    public Response<?> addUser(@Valid User user, BindingResult result);
+    public Response<?> addUser(@Valid User user);
 }

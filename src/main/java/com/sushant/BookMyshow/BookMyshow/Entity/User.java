@@ -1,17 +1,17 @@
 package com.sushant.BookMyshow.BookMyshow.Entity;
 
 import com.sushant.BookMyshow.BookMyshow.CustomConstraints.Adult;
-import com.sushant.BookMyshow.BookMyshow.CustomConstraints.ValidMobileNumber;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import jakarta.validation.constraints.*;
 
 import java.util.Date;
-
+@NoArgsConstructor
 @Entity
 @Data
 public class User {
@@ -36,8 +36,10 @@ public class User {
     )
     String password;
     @NonNull
-    @ValidMobileNumber
-    Integer mobileNumber;
+    @Pattern(regexp = "^[0-9]{10}$",message = "mobile number must br of 10 digit")
+    String mobileNumber;
     @Adult
     Date birthday;
+    @NonNull
+    String role;
 }
